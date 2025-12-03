@@ -77,7 +77,7 @@ while True:
         response_format={"type": "json_object"},
         messages=messages
     )
-
+    
     messages.append({ "role": "assistant", "content": response.choices[0].message.content })
     parsed_response = json.loads(response.choices[0].message.content)
 
